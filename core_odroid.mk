@@ -201,52 +201,6 @@ PRODUCT_COPY_FILES += \
 endif
 #endif
 
-
-#########################################################################
-#
-#                                                Secure OS
-#
-#########################################################################
-ifeq ($(TARGET_USE_OPTEEOS),true)
-ifneq ($(TARGET_KERNEL_BUILT_FROM_SOURCE), false)
-PRODUCT_PACKAGES += \
-	optee_armtz \
-	optee
-endif
-
-PRODUCT_PACKAGES += \
-	tee-supplicant \
-	libteec \
-	tee_helloworld \
-	tee_crypto \
-	tee_xtest \
-	tdk_auto_test \
-	tee_helloworld_ta \
-	tee_fail_test_ta \
-	tee_crypt_ta \
-	tee_os_test_ta \
-	tee_rpc_test_ta \
-	tee_sims_ta \
-	tee_storage_ta \
-	tee_storage2_ta \
-	tee_storage_benchmark_ta \
-	tee_aes_perf_ta \
-	tee_sha_perf_ta \
-	tee_sdp_basic_ta \
-	tee_concurrent_ta \
-	tee_concurrent_large_ta \
-	tee_provision \
-	libprovision \
-	tee_provision_ta \
-	tee_hdcp \
-	tee_hdcp_ta
-
-ifeq ($(TARGET_USE_HW_KEYMASTER),true)
-PRODUCT_PACKAGES += \
-        keystore.$(TARGET_PRODUCT)
-endif
-endif
-
 #########################################################################
 #
 #                                     hardware interfaces

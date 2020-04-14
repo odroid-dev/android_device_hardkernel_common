@@ -272,8 +272,6 @@ PRODUCT_PACKAGES += bootplayer \
 endif
 ifeq ($(BUILD_WITH_TEEVIDEOFIRM_LOAD),true)
 PRODUCT_PACKAGES += \
-    libtee_load_video_fw \
-    tee_preload_fw \
     526fc4fc-7ee6-4a12-96e3-83da9565bce8
 endif
 #BOARD_SECCOMP_POLICY := device/hardkernel/common/seccomp

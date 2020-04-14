@@ -13,7 +13,7 @@ allow init { system_file vendor_file rootfs}:system { module_load };
 
 allow init vendor_file:file { execute };
 
-allow init { tee_block_device userdata_block_device cache_block_device block_device metadata_block_device vbmeta_block_device }:blk_file { relabelto write read };
+allow init { userdata_block_device cache_block_device block_device metadata_block_device vbmeta_block_device }:blk_file { relabelto write read };
 allow init { vendor_block_device system_block_fsck_device odm_block_device param_block_device product_block_device dtbo_block_device }:blk_file { relabelto write read };
 
 allow init boot_block_device:blk_file relabelto;
@@ -32,7 +32,6 @@ allow init property_socket:sock_file write;
 allow init debugfs:dir { mounton };
 
 allow init mnt_vendor_file:dir mounton;
-allow init tee_data_file:dir mounton;
 
 allow init socket_device:sock_file { create setattr unlink };
 
