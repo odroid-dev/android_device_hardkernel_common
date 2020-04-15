@@ -130,12 +130,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.wallpaper=vendor/etc/default_wallpaper.png
 endif
 
-# Include BUILD_NUMBER if defined
-VERSION_ID=$(shell find device/*/$(TARGET_PRODUCT) -name version_id.mk)
-$(call inherit-product, $(VERSION_ID))
-
-DISPLAY_BUILD_NUMBER := true
-
 # default timezone
 PRODUCT_PROPERTY_OVERRIDES += \
         persist.sys.timezone=Asia/Shanghai

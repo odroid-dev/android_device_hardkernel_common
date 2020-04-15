@@ -133,16 +133,6 @@ custom_keylayouts := $(wildcard device/hardkernel/common/keyboards/*.kl)
 PRODUCT_COPY_FILES += $(foreach file,$(custom_keylayouts),\
     $(file):$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/$(notdir $(file)))
 
-# Include BUILD_NUMBER if defined
-VERSION_ID=$(shell find device/*/$(TARGET_PRODUCT) -name version_id.mk)
-ifeq ($(VERSION_ID),)
-export BUILD_NUMBER := $(shell date +%Y%m%d)
-else
-$(call inherit-product, $(VERSION_ID))
-endif
-
-DISPLAY_BUILD_NUMBER := true
-
 #BOX project,set omx to video layer
 PRODUCT_PROPERTY_OVERRIDES += \
         media.omx.display_mode=1
