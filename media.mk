@@ -286,7 +286,3 @@ BOARD_AML_HARDWARE_PATH := hardware/amlogic/
 AMLOGIC_FRAMEWORKS_AV_CONFIG_MK := $(BOARD_AML_VENDOR_PATH)/frameworks/av/mediaextconfig/config.mk
 BOARD_AML_MEDIA_HAL_CONFIG := $(BOARD_AML_MEDIAHAL_PATH)/media_base_config.mk
 
-# for media modules
-PRODUCT_COPY_FILES += \
-	device/hardkernel/$(PRODUCT_DIR)/init.$(TARGET_PRODUCT).media.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.odroid.media.rc
-
