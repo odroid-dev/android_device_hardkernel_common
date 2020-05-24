@@ -123,6 +123,11 @@ PRODUCT_PACKAGES += \
     screen_source.$(TARGET_PRODUCT) \
     thermal.$(TARGET_PRODUCT)
 
+# F2FS support
+PRODUCT_PACKAGES += \
+    mkfs.f2fs \
+    mkf2fsuserimg.sh
+
 #glscaler and 3d format api
 PRODUCT_PACKAGES += \
     libdisplaysetting
