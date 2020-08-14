@@ -128,10 +128,6 @@ PRODUCT_PACKAGES += \
     mkfs.f2fs \
     mkf2fsuserimg.sh
 
-# AOSP 'su' binary
-PRODUCT_PACKAGES += \
-    su
-
 #glscaler and 3d format api
 PRODUCT_PACKAGES += \
     libdisplaysetting
