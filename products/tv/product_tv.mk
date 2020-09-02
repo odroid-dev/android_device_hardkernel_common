@@ -57,10 +57,6 @@ endif
 
 endif
 
-PRODUCT_PACKAGES += \
-    busybox \
-    utility_busybox
-
 # DLNA
 ifneq ($(TARGET_BUILD_GOOGLE_ATV), true)
 PRODUCT_PACKAGES += \

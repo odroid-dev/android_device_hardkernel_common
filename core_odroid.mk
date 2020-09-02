@@ -128,6 +128,10 @@ PRODUCT_PACKAGES += \
     mkfs.f2fs \
     mkf2fsuserimg.sh
 
+# toybox static
+PRODUCT_PACKAGES += \
+    toybox_static
+
 #glscaler and 3d format api
 PRODUCT_PACKAGES += \
     libdisplaysetting
