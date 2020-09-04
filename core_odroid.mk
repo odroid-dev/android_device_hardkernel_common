@@ -389,6 +389,10 @@ PRODUCT_PACKAGES += \
     cansniffer \
     canbusload
 
+# Superuser
+PRODUCT_PACKAGES += \
+    su
+
 PRODUCT_COPY_FILES += \
     hardware/interfaces/gnss/1.0/default/android.hardware.gnss@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gnss@1.0-service.rc
 
