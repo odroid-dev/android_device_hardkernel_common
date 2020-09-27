@@ -393,6 +393,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     su
 
+# NTFS-3G
+PRODUCT_PACKAGES += \
+    fsck.ntfs \
+    mkfs.ntfs \
+    mount.ntfs
+
 PRODUCT_COPY_FILES += \
     hardware/interfaces/gnss/1.0/default/android.hardware.gnss@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gnss@1.0-service.rc
 
