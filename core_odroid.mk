@@ -15,9 +15,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 ALLOW_MISSING_DEPENDENCIES := true
 
-# Include drawables for all densities
-PRODUCT_AAPT_CONFIG := normal hdpi xhdpi xxhdpi
-
 PRODUCT_PACKAGES += \
     libWnnEngDic \
     libWnnJpnDic \
