@@ -87,6 +87,14 @@ PRODUCT_PACKAGES += \
     libsystemcontrol_jni  \
     vendor.amlogic.hardware.systemcontrol@1.0_vendor
 
+ifeq ($(TARGET_BUILD_GOOGLE_ATV), true)
+#add tv library
+PRODUCT_PACKAGES += \
+    droidlogic-tv \
+    droidlogic.tv.software.core.xml \
+    libtv_jni
+endif
+
 PRODUCT_PACKAGES += \
     libdig \
     BluetoothRemote
