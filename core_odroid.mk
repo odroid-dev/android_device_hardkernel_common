@@ -129,11 +129,6 @@ PRODUCT_PACKAGES += \
     screen_source.$(TARGET_PRODUCT) \
     thermal.$(TARGET_PRODUCT)
 
-# F2FS support
-PRODUCT_PACKAGES += \
-    mkfs.f2fs \
-    mkf2fsuserimg.sh
-
 # toybox static
 PRODUCT_PACKAGES += \
     toybox_static
