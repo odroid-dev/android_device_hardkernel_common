@@ -390,9 +390,11 @@ PRODUCT_PACKAGES += \
     cansniffer \
     canbusload
 
+ifneq ($(TARGET_BUILD_GOOGLE_ATV), true)
 # Superuser
 PRODUCT_PACKAGES += \
     su
+endif
 
 # NTFS-3G
 PRODUCT_PACKAGES += \
