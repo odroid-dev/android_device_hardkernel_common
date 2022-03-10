@@ -114,12 +114,6 @@ PRODUCT_PACKAGES += \
     network \
     sdptool \
     e2fsck \
-    mkfs.exfat \
-    mount.exfat \
-    fsck.exfat \
-    ntfs-3g \
-    ntfsfix \
-    mkntfs \
     libxml2 \
     libamgralloc_ext \
     gralloc.$(TARGET_PRODUCT) \
