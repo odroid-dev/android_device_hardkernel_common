@@ -396,6 +396,10 @@ PRODUCT_PACKAGES += \
     su
 endif
 
+# SQLite3
+PRODUCT_PACKAGES += \
+    sqlite3 \
+
 # NTFS-3G
 PRODUCT_PACKAGES += \
     fsck.ntfs \
