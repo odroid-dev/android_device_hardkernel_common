@@ -167,24 +167,6 @@ PRODUCT_PACKAGES += libomx_av_core_alt \
     secmem \
     2c1a33c0-44cc-11e5-bc3b0002a5d5c51b
 
-# Dm-verity
-ifeq ($(BUILD_WITH_DM_VERITY), true)
-PRODUCT_SYSTEM_VERITY_PARTITION = /dev/block/system
-PRODUCT_VENDOR_VERITY_PARTITION = /dev/block/vendor
-# Provides dependencies necessary for verified boot
-PRODUCT_SUPPORTS_BOOT_SIGNER := true
-PRODUCT_SUPPORTS_VERITY := true
-PRODUCT_SUPPORTS_VERITY_FEC := true
-# The dev key is used to sign boot and recovery images, and the verity
-# metadata table. Actual product deliverables will be re-signed by hand.
-# We expect this file to exist with the suffixes ".x509.pem" and ".pk8".
-PRODUCT_VERITY_SIGNING_KEY := device/hardkernel/common/security/verity
-ifneq ($(TARGET_USE_SECURITY_DM_VERITY_MODE_WITH_TOOL),true)
-PRODUCT_PACKAGES += \
-        verity_key.amlogic
-endif
-endif
-
 #########################################################################
 #
 #                                                App optimization
