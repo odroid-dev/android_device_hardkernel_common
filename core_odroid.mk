@@ -408,6 +408,8 @@ PRODUCT_PACKAGES += \
     mkfs.exfat \
     fsck.exfat
 
+$(call inherit-product-if-exists, device/hardkernel/common/boblight.mk)
+
 PRODUCT_COPY_FILES += \
     hardware/interfaces/gnss/1.0/default/android.hardware.gnss@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gnss@1.0-service.rc
 
